@@ -59,4 +59,5 @@ Test names are in German, because that is the language the system was specified 
 
 ## Licence
 
-MIT — see [LICENSE](LICENSE).
+All rights reserved. Published for reading only — no licence granted, no reuse,
+no redistribution. See [LICENSE](LICENSE).
