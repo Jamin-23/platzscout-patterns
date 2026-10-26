@@ -32,7 +32,7 @@ graph TD
 |---|---|---|
 | `server.mjs` | 3.406 | HTTP-Router, Auth-Gate, alle Endpunkte, Stripe- und Mail-Webhooks |
 | `search-matching.mjs` | 683 | Matching/Ranking der Anbieter (**privat**) |
-| `pricing.mjs` | 212 | Katalog, Paket-/Add-on-Auflösung → in diesem Repo |
+| `pricing.mjs` | 212 | Katalog, Paket-/Add-on-Auflösung (nicht veröffentlicht) |
 | `lib/stripe-webhook-idempotency.mjs` | 42 | Webhook-Statemaschine → in diesem Repo |
 | `lib/search-request-workflow.mjs` | 183 | Status-Timeline einer Suchanfrage |
 | `lib/users.mjs`, `lib/audit.mjs`, `lib/geo.mjs`, … | je 30–200 | Nutzer, Audit, Geocoding, PLZ, Mail |
@@ -55,9 +55,11 @@ die Datenbank ist Projektion, nicht Wahrheit. Deshalb existieren für genau dies
 | `lib/refund-policy.ts` | 292 |
 | `lib/affiliate-commission-policy.ts` | 24 |
 | `backend/lib/stripe-webhook-idempotency.mjs` | 42 |
-| `backend/pricing.mjs` + `pricing-catalog.json` | 212 |
-| `backend/lib/geo.mjs` | 73 |
-| **Summe** | **~643 von 46.000 Zeilen (1,4 %)** |
+| `backend/server-excerpt.mjs` | 17 |
+| **Summe** | **375 von 46.000 Zeilen (0,8 %)** |
+
+Ausgewählt nach einer Regel: nur Stellen, an denen ein Fehler Geld kostet oder einen Zustand
+zerstört — und an denen man in 200 Zeilen erkennt, wie gearbeitet wird.
 
 Nicht enthalten: `search-matching`, `server.mjs`, Outreach-Sequenzen, Prisma-Schema,
-Migrationen, Kundendaten, Infrastruktur-Secrets.
+Migrationen, Kundendaten, Infrastruktur-Secrets. Auf Anfrage führe ich im Gespräch durch den Code.
