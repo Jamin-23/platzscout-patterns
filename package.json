@@ -1,0 +1,14 @@
+{
+  "name": "platzscout-patterns",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Three decision policies from a production SaaS, extracted as pure functions with tests: refund calculation, affiliate commission holds, Stripe webhook idempotency.",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "test": "node --test --experimental-strip-types 'tests/**/*.test.ts'"
+  },
+  "license": "MIT"
+}
