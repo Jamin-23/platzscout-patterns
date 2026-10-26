@@ -48,6 +48,10 @@ so tests can pin it.
 Package names and price points in `REFUND_POLICY` come from the discontinued product; the
 mechanism is what is being shown, not the commercial terms.
 
+`backend/server-excerpt.mjs` is a 17-line fragment from the production HTTP server: the two
+guards that screen a request before any handler runs. It is illustrative, not runnable - routes,
+SQL and integration code stay private.
+
 Test names are in German, because that is the language the system was specified in.
 
 ## Licence
