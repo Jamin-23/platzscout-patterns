@@ -1,0 +1,120 @@
+{
+  "currency": "eur",
+  "packages": {
+    "starter": {
+      "key": "starter",
+      "label": "Starter",
+      "subtitle": "Für eine erste strukturierte Suche",
+      "priceCents": 2900,
+      "documentedResults": 8,
+      "maxSpecialties": 1,
+      "recommended": false,
+      "stripePriceEnv": "STRIPE_PRICE_STARTER",
+      "radiusMinKm": 10,
+      "radiusMaxKm": 100
+    },
+    "standard": {
+      "key": "standard",
+      "label": "Standard",
+      "subtitle": "Für die meisten Suchaufträge",
+      "priceCents": 5900,
+      "documentedResults": 20,
+      "maxSpecialties": 2,
+      "recommended": true,
+      "stripePriceEnv": "STRIPE_PRICE_STANDARD",
+      "radiusMinKm": 10,
+      "radiusMaxKm": 100
+    },
+    "intensive": {
+      "key": "intensive",
+      "label": "Intensiv",
+      "subtitle": "Für schwierige oder breitere Suchen",
+      "priceCents": 11900,
+      "documentedResults": 35,
+      "maxSpecialties": 3,
+      "recommended": false,
+      "stripePriceEnv": "STRIPE_PRICE_INTENSIVE",
+      "radiusMinKm": 10,
+      "radiusMaxKm": 100,
+      "includesOnlineCheck": true
+    }
+  },
+  "addons": {
+    "phone_priority": {
+      "key": "phone_priority",
+      "label": "Priorisierte Telefonklärung",
+      "shortText": "Bis zu 5 Praxen früher telefonisch klären.",
+      "quantityLabel": "bis zu 5 Praxen",
+      "priceCents": 2000,
+      "stripePriceEnv": "STRIPE_PRICE_ADDON_PHONE_PRIORITY",
+      "priorityPhonePracticesAdd": 5,
+      "maxQuantity": 1
+    },
+    "extra_results": {
+      "key": "extra_results",
+      "label": "Zusätzliche Ergebnisrunde",
+      "shortText": "Bis zu 10 weitere dokumentierte Praxisergebnisse.",
+      "quantityLabel": "bis zu 10 weitere Ergebnisse",
+      "priceCents": 2900,
+      "stripePriceEnv": "STRIPE_PRICE_ADDON_EXTRA_RESULTS",
+      "maxDocumentedPracticeResultsAdd": 10,
+      "maxQuantity": 5
+    },
+    "extra_specialty": {
+      "key": "extra_specialty",
+      "label": "Zusätzliches Fachgebiet",
+      "shortText": "Ein weiteres Fachgebiet oder Suchanliegen.",
+      "quantityLabel": "ein weiteres Fachgebiet",
+      "priceCents": 1200,
+      "stripePriceEnv": "STRIPE_PRICE_ADDON_EXTRA_SPECIALTY",
+      "maxSpecialtiesAdd": 1,
+      "maxQuantity": 2
+    }
+  },
+  "deprecatedAliases": {
+    "addons": {
+      "priority_phone": {
+        "canonicalKey": "phone_priority",
+        "label": "Priorisierte Telefonklärung"
+      },
+      "extra_result_round": {
+        "canonicalKey": "extra_results",
+        "label": "Zusätzliche Ergebnisrunde"
+      },
+      "phone_small": {
+        "canonicalKey": "phone_priority",
+        "label": "Alte Zusatzleistung: Telefonische Klärung klein"
+      },
+      "phone_large": {
+        "canonicalKey": "phone_priority",
+        "label": "Alte Zusatzleistung: Telefonische Klärung groß"
+      },
+      "more_digital_practices": {
+        "canonicalKey": "extra_results",
+        "label": "Alte Zusatzleistung"
+      },
+      "more_digital_practices_10": {
+        "canonicalKey": "extra_results",
+        "label": "Alte Zusatzleistung"
+      },
+      "extra_practices": {
+        "canonicalKey": "extra_results",
+        "label": "Alte Zusatzleistung: Extra Praxen"
+      },
+      "extra_results_round": {
+        "canonicalKey": "extra_results",
+        "label": "Zusätzliche Ergebnisrunde"
+      }
+    },
+    "stripeEnv": {
+      "STRIPE_PRICE_INTENSIV": "STRIPE_PRICE_INTENSIVE",
+      "STRIPE_PRICE_ADDON_PHONE_SMALL": "STRIPE_PRICE_ADDON_PHONE_PRIORITY",
+      "STRIPE_PRICE_ADDON_PHONE_LARGE": "STRIPE_PRICE_ADDON_PHONE_PRIORITY",
+      "STRIPE_PRICE_ADDON_MORE_DIGITAL": "STRIPE_PRICE_ADDON_EXTRA_RESULTS",
+      "STRIPE_PRICE_ADDON_EXTRA_PRACTICES": "STRIPE_PRICE_ADDON_EXTRA_RESULTS",
+      "STRIPE_PRICE_PRIORITY_PHONE": "STRIPE_PRICE_ADDON_PHONE_PRIORITY",
+      "STRIPE_PRICE_EXTRA_RESULT_ROUND": "STRIPE_PRICE_ADDON_EXTRA_RESULTS",
+      "STRIPE_PRICE_EXTRA_SPECIALTY": "STRIPE_PRICE_ADDON_EXTRA_SPECIALTY"
+    }
+  }
+}
